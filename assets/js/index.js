@@ -27,7 +27,6 @@ window.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-
 function mainUI(data) {
     const l_card = document.querySelector("[data-itemData='l_card']");
     const sm_card_1 = document.querySelector("[data-itemData='sm_card_1']");
@@ -90,39 +89,43 @@ function createDivMostLiked(e) {
 }
 
 function createDivElectronics(e) {
-
-    document.querySelector("[data-itemData='electronics']").insertAdjacentHTML("beforeend",
-        `      
+    const itemHTML = `
         <li class="item">
 
-        <a href="blog.html?itemID=${e.itemID}&itemName=${generateSEOSafeProductName(e.itemName)}" hreflang="" class="card">
+            <a href="blog.html?itemID=${e.itemID}&itemName=${generateSEOSafeProductName(e.itemName)}" hreflang="" class="card">
 
-            <div class="card_header">
+                <div class="card_header">
 
-                <img src="${e.itemPic}" alt="${e.itemShortName}"></img>
+                    <img src="${e.itemPic}" alt="${e.itemShortName}"></img>
 
-                <div class="brand">
-                <b>${e.itemBrand}</b>
+                    <div class="brand">
+                        <b>${e.itemBrand}</b>
+                    </div>
+
                 </div>
 
-            </div>
+                <div class="card_body">
 
-            <div class="card_body">
+                    <div class="time"><span>${e.itemCategory}, ${e.itemSubCategory}</span> | <span>30 Jun 2024</span></div>
 
-                <div class="time"><span>${e.itemCategory}, ${e.itemSubCategory}</span> | <span>30 Jun 2024</span></div>
-
-            </div>
-
-            <div class="card_footer">
-
-                <div class="card_title">
-                ${e.itemName}
                 </div>
 
-            </div>
+                <div class="card_footer">
 
-        </a>
+                    <div class="card_title">
+                        ${e.itemName}
+                    </div>
 
-    </li>
-`)
+                </div>
+
+            </a>
+
+        </li>
+`;
+
+    const electronicsContainer = document.querySelector("[data-itemData='electronics']");
+
+    if (electronicsContainer) {
+        electronicsContainer.insertAdjacentHTML("beforeend", itemHTML);
+    }
 }
