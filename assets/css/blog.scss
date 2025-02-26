@@ -1,8 +1,110 @@
-@import url("../../../../assets/css/icons.css");
-@import "../../../../assets/css/mixin.scss";
+@import "./general/base.scss";
+@import "./general/mixin.scss";
 
-.recipes {
-    .recipe {
+.nav {
+    &_top {
+        padding: var(--md-p);
+
+        &_body {
+            @include Dflex(space-between);
+
+            .socials {
+                display: flex;
+                gap: var(--sm-p);
+
+                &_item {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+
+            .contacts {
+                display: flex;
+                gap: var(--md-p);
+
+                &_item {
+                    a {
+                        display: flex;
+                        align-items: center;
+                        gap: var(--sm-p);
+
+                        span {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &_btm {
+        padding: var(--md-p);
+        background-color: var(--background-color-secondary);
+
+        &_body {
+            .brand {
+                font-size: 1.5em;
+                display: flex;
+            }
+
+            .links {
+                display: flex;
+                gap: var(--md-p);
+            }
+        }
+    }
+
+    @media only screen and (max-width: 600px) {
+        & {
+            &_top {
+                &_body {
+                    .contacts {
+                        &_item {
+                            a {
+                                u {
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            &_btm {
+                &_body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: var(--md-p);
+
+                    .brand {
+                        justify-content: center;
+                    }
+
+                    .links {
+                        justify-content: center;
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        & {
+            &_btm {
+                &_body {
+                    @include Dflex(space-between);
+                }
+            }
+        }
+    }
+}
+
+.main_container {
+    min-height: 100vh;
+    padding: var(--md-p);
+
+    .main_header {
 
         a {
             width: 100%;
@@ -90,7 +192,7 @@
                     border-radius: var(--border-radius-light);
 
                     &_header {
-                        h3 {
+                        h2 {
                             margin-bottom: var(--md-p)
                         }
                     }

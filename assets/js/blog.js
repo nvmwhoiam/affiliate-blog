@@ -14,10 +14,7 @@ window.addEventListener("DOMContentLoaded", async function () {
         const response = await fetch('./assets/js/blog.json');
         const data = await response.json();
 
-        // mainUI(data);
-
         for (const itemData of data) {
-
             if (itemData.itemID === itemID) {
 
                 systemUI(itemData);
@@ -50,8 +47,6 @@ async function systemUI(itemData) {
 function createDiv(e) {
     const specsContainer = document.querySelector(".specs");
 
-    // window.addEventListener("DOMContentLoaded", function () {
-
     // Set the href attribute of an element with itemData='href'
     document.querySelector("[data-itemData='href']").setAttribute('href', e.itemHref);
 
@@ -61,8 +56,6 @@ function createDiv(e) {
     document.querySelector("[data-itemData='itemName']").innerText = e.itemName;
 
     document.querySelector("[data-itemData='itemShortName']").innerText = e.itemShortName;
-
-    // });
 
     for (const key in e.specs) {
         if (e.specs.hasOwnProperty(key)) {

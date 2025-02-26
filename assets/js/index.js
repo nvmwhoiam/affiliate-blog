@@ -13,14 +13,10 @@ window.addEventListener("DOMContentLoaded", async function () {
         for (const itemData of data) {
             createDivMostLiked(itemData);
 
-            // if (itemData.itemCategory === "Electronics") {
-            //     createDivElectronics(itemData);
-            // }
+            if (itemData.itemCategory === "Electronics") {
+                createDivElectronics(itemData);
+            }
         }
-
-        // setTimeout(function () {
-        //     document.querySelector(".page_loader").classList.add("loaded");
-        // }, 2000)
 
     } catch (error) {
         console.error('Error during fetching data:', error);
@@ -52,7 +48,7 @@ function createDivMostLiked(e) {
     const itemHTML = `
         <li class="item">
 
-            <a href="blog.html?itemID=${e.itemID}&itemName=${generateSEOSafeProductName(e.itemName)}" hreflang="" class="card">
+            <a href="blog.html?itemID=${e.itemID}&itemName=${generateSEOSafeProductName(e.itemName)}" hreflang="en" class="card" aria-label="Blog item">
 
                 <div class="card_header">
 
@@ -65,7 +61,7 @@ function createDivMostLiked(e) {
                 </div>
 
                 <div class="card_body">
-                    <div class="time"><span>${e.itemCategory}, ${e.itemSubCategory}</span> | <span>${e.itemTime}</span></div>
+                    <p class="time"><span>${e.itemCategory}, ${e.itemSubCategory}</span> | <span>${e.itemTime}</span></p>
                 </div>
 
                 <div class="card_footer">
@@ -82,7 +78,6 @@ function createDivMostLiked(e) {
       `;
 
     const mostLikedContainer = document.querySelector("[data-itemData='most_liked']");
-
     if (mostLikedContainer) {
         mostLikedContainer.insertAdjacentHTML("beforeend", itemHTML);
     }
@@ -105,9 +100,7 @@ function createDivElectronics(e) {
                 </div>
 
                 <div class="card_body">
-
-                    <div class="time"><span>${e.itemCategory}, ${e.itemSubCategory}</span> | <span>30 Jun 2024</span></div>
-
+                    <p class="time"><span>${e.itemCategory}, ${e.itemSubCategory}</span> | <span>30 Jun 2024</span></p>
                 </div>
 
                 <div class="card_footer">
@@ -124,7 +117,6 @@ function createDivElectronics(e) {
 `;
 
     const electronicsContainer = document.querySelector("[data-itemData='electronics']");
-
     if (electronicsContainer) {
         electronicsContainer.insertAdjacentHTML("beforeend", itemHTML);
     }
