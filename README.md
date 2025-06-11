@@ -1,13 +1,10 @@
 # Affiliate Blog
 
-<div align="center">
-  <h3>Modern Affiliate Content Management System</h3>
-  <p>A sleek, accessible, and intuitive platform for creating and managing affiliate content.</p>
-</div>
+Modern Affiliate Content Management System. A sleek, accessible, and intuitive platform for creating and managing affiliate content.
 
 ## 🌟 Overview
 
-Affiliate Blog is a modern web application designed to help content creators manage and publish affiliate content effectively. It features a beautiful UI with content management capabilities, SEO optimization tools, and seamless affiliate link integration.
+Affiliate Blog helps creators manage and publish SEO-friendly affiliate content. Fast, responsive, and ideal for bloggers and marketers to monetize effectively.
 
 ## ✨ Key Features
 
@@ -15,6 +12,7 @@ Affiliate Blog is a modern web application designed to help content creators man
 
 - Intuitive post editor
 - Support for multiple content types:
+
   ```javascript
   // Content Types Reference
   articles:    Blog posts and reviews
@@ -24,6 +22,7 @@ Affiliate Blog is a modern web application designed to help content creators man
   reviews:     Detailed reviews
   landing:     Landing pages
   ```
+
 - Rich media integration
 - SEO optimization tools
 
@@ -115,26 +114,20 @@ The platform supports various content types:
 - Email newsletter integration
 - Social media automation
 
-## 📬 Contact
+## Contact
 
-If you have any questions or need assistance, please feel free to reach out. You can contact me at [info@lynqis.io](mailto:info@lynqis.io) or open an issue on the [GitHub Repository](https://github.com/nvmwhoiam/affiliate-blog).
+If you have any questions or need assistance, please do not hesitate to reach out. I apologize if any part of this setup is not clear; this is my first major project, and I am putting in continuous effort to improve it. Feel free to contact me at [info@sadevworks.com](mailto:info@sadevworks.com) or open an issue on the [GitHub Repository](https://github.com/nvmwhoiam/affiliate-blog).
 
-## 🤝 Contributing
+## Contributing
 
-Contributions are welcome! Please follow these steps:
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a pull request
+## License
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
 ## Author
 
-- nvmwhoiam
-- Website: [lynqis.io](https://lynqis.io)
-- GitHub: [GitHub Profile](https://github.com/nvmwhoiam/)
+- Email: [info@sadevworks.com](mailto:info@sadevworks.com)
+- Website: [sadevworks.com](https://sadevworks.com)
+- GitHub: [@nvmwhoiam](https://github.com/nvmwhoiam/)
